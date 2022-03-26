@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Una csdasdadocacola
 asd cocaasds
 asd
@@ -21,3 +22,13 @@ sdfwsdaf54343543 &&%%%$#%$#$
   sdfwsdaf54343543dasdas
   d
   asdasd
+=======
+Una cocacola
+Otra cocaaa
+
+<<<<<<< HEAD
+Agregando cocas a la rama Henry
+>>>>>>> parent of 24eb027 (Quitando las cocas)
+=======
+Agregando cocas a la rama Henry
+>>>>>>> parent of 24eb027 (Quitando las cocas)
