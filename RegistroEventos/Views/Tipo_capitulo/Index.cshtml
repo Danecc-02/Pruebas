@@ -1,0 +1,43 @@
+﻿@model IEnumerable<RegistroEventos.Models.Tipo_capitulo>
+
+@{
+    ViewData["Title"] = "Lista-Tipo_de_Capítulos";
+}
+
+<link rel="stylesheet" href="~/css/Style-vistas.css" />
+
+<div class="panel-izquierdo">
+	<img id="logo-principal" src="img/fihnec-logo.png" >
+
+</div>
+    <a type="button" class="btn btn-outline-dark boton-panel" asp-action="Create" >Agregar</a>
+    <a class="btn btn-outline-dark boton-inicio" asp-area="" asp-controller="Capituloes" asp-action="Index">Capítulo</a>
+   
+<h4 class="txt-h4">Tipos de Capítulo</h4>
+	
+
+
+<table class="table table-hover tabla-datos">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre_tipo_capitulo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre_tipo_capitulo)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-outline-dark btn-action" asp-route-id="@item.id_tipo_capitulo">Editar</a> 
+                <a asp-action="Details" class="btn btn-outline-dark btn-action" asp-route-id="@item.id_tipo_capitulo">Detalles</a> 
+                <a asp-action="Delete" class="btn btn-outline-dark btn-action" asp-route-id="@item.id_tipo_capitulo">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

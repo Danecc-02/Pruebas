@@ -1,0 +1,33 @@
+﻿@model RegistroEventos.Models.Tipo_capitulo
+
+@{
+    ViewData["Title"] = "Crear-tipo-capítulo";
+}
+
+<link rel="stylesheet" href="~/css/Style-crud.css" />
+<link rel="stylesheet" href="~/img/fihnec-logo.png" />
+<h4 class="txt-h4">Registrar Tipo de Capítulo</h4>
+
+<img id="logo-participantes" src="~/img/fihnec-logo.png"/>
+
+
+    <div class="cont-add-parti">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group p1">
+                <label asp-for="nombre_tipo_capitulo" placeholder="Ingrese tipo de capítulo" class="control-label"></label>
+                <input asp-for="nombre_tipo_capitulo" class="form-control" />
+                <span asp-validation-for="nombre_tipo_capitulo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+               <input type="submit" value="Guardar" class="btn btn-outline-dark boton-guardar" />
+               <a class="btn btn-outline-dark boton-cancelar" asp-action="Index">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

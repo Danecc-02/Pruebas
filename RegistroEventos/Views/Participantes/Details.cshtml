@@ -1,0 +1,50 @@
+﻿@model RegistroEventos.Models.Participante
+
+@{
+    ViewData["Title"] = "Detalle-participante";
+}
+<link rel="stylesheet" href="~/css/Style-crud.css" />
+<link rel="stylesheet" href="~/img/fihnec-logo.png" />
+<h4 class="txt-h4">Detalle Participante</h4>
+
+<img id="logo-participantes" src="~/img/fihnec-logo.png"/>
+<div class="cont-add-parti">
+ 
+    <dl class="row Style-delete">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nombre_participante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nombre_participante)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.apellido_participante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.apellido_participante)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dni_participante)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.dni_participante)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Capitulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Capitulo.nombre_capitulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+    </dl>
+</div>
+<div>
+
+    
+    <a class="btn btn-outline-dark boton-cancelar-detalle" asp-action="Index">Cancelar</a>
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<RegistroEventos.Models.Capitulo>
+
+@{
+    ViewData["Title"] = "Lista-Capitulos";
+}
+<link rel="stylesheet" href="~/css/Style-vistas.css" />
+
+
+<div class="panel-izquierdo">
+	<img id="logo-principal" src="img/fihnec-logo.png" >
+    
+</div>
+
+<div>
+    <a type="button" class="btn btn-outline-dark boton-panel" asp-action="Create" >Agregar</a>
+    <a class="btn btn-outline-dark boton-inicio" asp-area="" asp-controller="Home" asp-action="Index">Menú</a>
+    <a class="btn btn-outline-dark boton-inferior"asp-area="" asp-controller="Tipo_capitulo" asp-action="Index">Tipo de capítulos</a>
+</div>
+
+
+    <h4 class="txt-h4">Lista de Capítulos</h4>
+
+<table class="table table-hover tabla-datos">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nombre_capitulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.lugar_capitulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo_capitulo.nombre_tipo_capitulo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nombre_capitulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.lugar_capitulo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo_capitulo.nombre_tipo_capitulo)
+            </td>
+            <td>
+                <a asp-action="Edit" class="btn btn-outline-dark btn-action" asp-route-id="@item.id_capitulo">Editar</a> 
+                <a asp-action="Details" class="btn btn-outline-dark btn-action" asp-route-id="@item.id_capitulo">Detalles</a> 
+                <a asp-action="Delete" class="btn btn-outline-dark btn-action" asp-route-id="@item.id_capitulo">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
