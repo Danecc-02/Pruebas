@@ -1,0 +1,42 @@
+﻿@model RegistroEventos.Models.Capitulo
+
+@{
+    ViewData["Title"] = "Crear-Capítulo";
+}
+
+<link rel="stylesheet" href="~/css/Style-crud.css" />
+<link rel="stylesheet" href="~/img/fihnec-logo.png" />
+<h4 class="txt-h4">Registrar Participante</h4>
+
+<img id="logo-participantes" src="~/img/fihnec-logo.png"/>
+
+
+    <div class="cont-add-parti">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group p1">
+                <label asp-for="nombre_capitulo" class="control-label"></label>
+                <input asp-for="nombre_capitulo" placeholder="Ingrese nombre del capítulo" class="form-control" />
+                <span asp-validation-for="nombre_capitulo" class="text-danger"></span>
+            </div>
+            <div class="form-group p2">
+                <label asp-for="lugar_capitulo" class="control-label"></label>
+                <input asp-for="lugar_capitulo" placeholder="Ingrese el lugar del capítulo" class="form-control" />
+                <span asp-validation-for="lugar_capitulo" class="text-danger"></span>
+            </div>
+            <div class="form-group p3">
+                <label asp-for="id_tipo_capitulo" class="control-label"></label>
+                <select asp-for="id_tipo_capitulo" class ="form-control" asp-items="ViewBag.id_tipo_capitulo"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-outline-dark boton-guardar" />
+                 <a class="btn btn-outline-dark boton-cancelar" asp-action="Index">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

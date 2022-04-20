@@ -1,0 +1,39 @@
+﻿@model RegistroEventos.Models.Capitulo
+
+@{
+    ViewData["Title"] = "Eliminar-Capítulo";
+}
+<link rel="stylesheet" href="~/css/Style-crud.css" />
+<link rel="stylesheet" href="~/img/fihnec-logo.png" />
+<h4 class="txt-h4">Eliminar Participante</h4>
+
+<img id="logo-participantes" src="~/img/fihnec-logo.png"/>
+<div class="cont-add-parti">
+    
+    <dl class="row Style-delete">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nombre_capitulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nombre_capitulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.lugar_capitulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.lugar_capitulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tipo_capitulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tipo_capitulo.nombre_tipo_capitulo)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+         <input type="hidden" asp-for="id_capitulo" />
+        <input type="submit" value="Eliminar" class="btn btn-outline-dark boton-cancelar" />
+        <a class="btn btn-outline-dark boton-guardar" asp-action="Index">Cancelar</a>
+    </form>
+</div>

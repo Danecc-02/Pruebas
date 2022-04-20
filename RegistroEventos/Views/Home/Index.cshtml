@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Menú inicio";
+}
+ <link rel="stylesheet" href="~/css/Style.css" />
+  <link rel="stylesheet" href="~/img/fihnec-logo.png" />
+  <img id="logo-css" src="~/img/fihnec-logo.png"/>
+  <form class="contenedor-botones">
+
+    <div class= "btn1" >
+     <a class="btn btn-outline-dark boton-menu" asp-area="" asp-controller="Participantes" asp-action="Index">Participantes</a>
+    </div>
+
+    <div class= "btn1">
+     <a class="btn btn-outline-dark boton-menu" asp-area="" asp-controller="Eventoes" asp-action="Index">Eventos</a>
+    </div>
+    
+    <div class= "btn1" >
+      <a class="btn btn-outline-dark boton-menu" asp-area="" asp-controller="Capituloes" asp-action="Index">Capítulo</a>
+    </div>
+    
+    
+  </form>

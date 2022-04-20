@@ -1,0 +1,117 @@
+﻿.panel-izquierdo {
+    padding: 1.5em 0;
+    height: 85%;
+    width: 15%;
+    position:absolute;
+    left:0em;
+    
+    background-color: rgb(247, 236, 69);
+}
+#logo-principal {
+    position: absolute;
+    width: 11vw;
+    left: 50%;
+    top: 3%;
+    transform: translate(-50%,-3%);
+}
+.txt-h4 {
+    position: absolute;
+    left: 50%;
+    top: 3.5rem;
+    font-size: 25px;
+    font-family: serif;
+}
+
+.boton-inicio {
+    outline: 1px;
+    position: absolute;
+    border-radius: 12px;
+    top: 19em;
+    left: 2%;
+    width: 8em;
+    transition: background-color .5s;
+}
+
+    .boton-inicio:hover {
+        background-color: rgb(0, 46, 130);
+        color: white;
+    }
+
+.tabla-datos {
+    position: absolute;
+    top: 30%;
+    left:57%;
+    width:60%;
+    transform: translate(-50%,-30%);
+    text-align: center;
+    font-family: serif;
+    font-size: 14px;
+  
+}
+
+.boton-panel {
+    outline: 1px;
+    position: absolute;
+    border-radius: 12px;
+    top: 15em;
+    left: 2%;
+    width: 8em;
+    transition: background-color .5s;
+}
+    .boton-panel:hover {
+        background-color: rgb(0, 46, 130);
+        color: white;
+    }
+.boton-inferior {
+    outline: 1px;
+    position: absolute;
+    border-radius: 12px;
+    top: 83vh;
+    left: 1%;
+    width: 10em;
+    transition: background-color .5s;
+}
+
+    .boton-inferior:hover {
+        background-color: rgb(0, 46, 130);
+        color: white;
+    }
+.btn-action {
+    outline: 1px;
+    border-radius: 12px;
+    width: 6em;
+    transition: background-color .5s;
+    font-size:10px;
+    text-align:center;
+  
+}
+
+    .btn-action:hover {
+        background-color: rgb(0, 46, 130);
+        color: white;
+    }
+
+@media only screen and (max-width: 768px) {
+    .boton-inicio {
+        left: 3%;
+        width: 10vw;
+        font-size: 10px;
+    }
+    .boton-panel {
+        left: 3%;
+        width: 10vw;
+        font-size:10px;
+       
+    }
+    .btn-action {
+        width: 8vw;
+        font-size: 9px;
+        
+    }
+
+    .boton-inferior {
+        left: 3%;
+        width: 10vw;
+        font-size: 10px;
+    }
+}

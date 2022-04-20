@@ -1,0 +1,24 @@
+﻿@model RegistroEventos.Models.Tipo_capitulo
+
+@{
+    ViewData["Title"] = "Detalles-tipo-capítulo";
+}
+<link rel="stylesheet" href="~/css/Style-crud.css" />
+<link rel="stylesheet" href="~/img/fihnec-logo.png" />
+<h4 class="txt-h4">Detalle Tipo de Capítulo</h4>
+
+<img id="logo-participantes" src="~/img/fihnec-logo.png"/>
+<div class="cont-add-parti">
+    
+    <dl class="row Style-delete">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nombre_tipo_capitulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nombre_tipo_capitulo)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-outline-dark boton-cancelar-detalle" asp-action="Index">Cancelar</a>
+</div>

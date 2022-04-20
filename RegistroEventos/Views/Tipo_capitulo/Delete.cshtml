@@ -1,0 +1,27 @@
+﻿@model RegistroEventos.Models.Tipo_capitulo
+
+@{
+    ViewData["Title"] = "Eliminar-tipo-de-capitulo";
+}
+<link rel="stylesheet" href="~/css/Style-crud.css" />
+<link rel="stylesheet" href="~/img/fihnec-logo.png" />
+<h4 class="txt-h4">Eliminar Tipo de Capítulo</h4>
+
+<img id="logo-participantes" src="~/img/fihnec-logo.png"/>
+<div class="cont-add-parti">
+    
+    <dl class="row Style-delete">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nombre_tipo_capitulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nombre_tipo_capitulo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+         <input type="hidden" asp-for="id_tipo_capitulo" />
+        <input type="submit" value="Eliminar" class="btn btn-outline-dark boton-cancelar" />
+        <a class="btn btn-outline-dark boton-guardar" asp-action="Index">Cancelar</a>
+    </form>
+</div>
